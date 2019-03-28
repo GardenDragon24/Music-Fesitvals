@@ -1,0 +1,189 @@
+/* ====================================
+    Base Element Styles
+=====================================*/
+
+* {
+    box-sizing: border-box;
+ }
+ 
+ body {
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
+     line-height: 1.6;
+     color: rgb(3, 2, 0);
+ }
+ 
+ p {
+     font-size: .95em;
+     margin-bottom: 1.5em
+ }
+ 
+ h2,
+ h3 {
+     color: black
+ }
+ 
+ a {
+     color: white
+ }
+ 
+ h2,
+ h3 {
+     margin-top: 0;
+ }
+ 
+ a {
+     text-decoration: none;
+ }
+ 
+ /*=======================================
+ Base Layout Styles
+ =======================================*/
+ 
+ /*----Layout Containers----*/
+ 
+ .wrapper {
+     padding-left 1em;
+     padding-right 1em;
+ }
+ 
+     
+ .main-header{
+     text-align: center;
+     padding-top: 1.5em;
+     padding-bottom: 1.5em;
+     background: purple;
+     margin-bottom: 30px;
+ }
+ 
+ .main-footer {
+     text-align: center;
+     padding: 2em 0;
+     background: grey;
+     margin-top: 30px;
+ }
+ 
+ 
+ /*----Navigation----*/
+ 
+ .name {
+     font-size: 1.25em;
+     margin: 0;
+ }
+ 
+ .main-nav {
+     margin-top: 5px;
+ }
+ 
+ .name,
+ .main-nav li {
+     text-align: center;
+     background: black;
+     margin-top: 6px;
+     margin-bottom: 6px;
+ }
+ 
+ .main-nav a {
+     font-size: .95em;
+     color: #fff;
+     text-transform: uppercase;
+ }
+ 
+ .main-nav a:hover {
+     color: #09ea58;
+ }
+ 
+ .name a,
+ .main-nav a {
+     text-align: center;
+     padding: 10px 15px;
+     display: block;
+ }
+ 
+ /* Attribute Selectors --------------*/
+ 
+ 
+ 
+ /*=======================================
+ Media Queries
+ =======================================*/
+ 
+ @media (min-width: 769px) {
+ 
+     body{
+         padding-top: 144px;
+     }
+ 
+     .wrapper{
+         width: 80%;
+         max-width: 1150px;
+         margin:0 auto;
+     }
+     
+     .main-header {
+         position: fixed;
+         width: 100%;
+         top: 0;
+         z-index: 1000;
+     
+     }
+ }
+     /* --- Float clearfix ---*/
+ 
+     .clearfix::after {
+         content: "";
+         display: table;
+         clear: both;
+     }
+     
+     .name, 
+     .col {
+         float: left;
+     }
+     
+     .col {
+         padding-left: 1em;
+         padding-right: 1em;
+     }
+ 
+     .primary,
+     .secondary {
+         width: 50%;
+     }
+ 
+     .main-nav {
+         float: right;
+     }
+     .main-nav li {
+         display: inline-block;
+         margin-left: 15px
+     }
+ 
+     .wrap {
+         min-height: calc(100vh - 89px);
+     }
+ 
+     .name {
+         width: 240px;
+     }
+ 
+     .img-party {
+         width: 300px;
+         float: left;
+         margin-top: 5px;
+         margin-right: 25px;
+         margin-bottom: 25px
+     }
+ 
+ }
+ 
+ 
+ @media (min-width: 1025px){
+ 
+     .wrapper {
+         width: 80%;
+         max-width: 1150px;
+     }
+ }
+ 
+ /* --- Columns ---*/
+ 
