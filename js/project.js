@@ -1,7 +1,14 @@
-const myHome = document.getElementById('myHome');
-const myButton = document.getElementById('myButton');
-const myTextInput = document.getElementById('myTextInput')
+// Create the "supply" button
+const $button = $('<button>Reveal Supplies</button>');
+//Apend to web page
+$('.supply').append($button);
 
-myButton.addEventListener('click', () => {
-    myHome.style.color = myTextInput.value;
+//Hide the supplies text
+$('.supply span').hide();
+//When the button is pressed
+$('.supply button').click(function(){
+  //Show the supplies text
+  $('.supply span').show();
+  //Hide the "supplies" button
+  $('.supply button').hide();
 });

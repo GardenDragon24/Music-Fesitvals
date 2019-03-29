@@ -25,7 +25,7 @@ html {
  p {
      font-size: .95em;
      margin-bottom: 1.5em;
-     color: white
+     color: blue
  }
  
  h2,
@@ -46,6 +46,32 @@ html {
      text-decoration: none;
  }
  
+ button {
+    background: #dae1e4;
+    border: none;
+    border-radius: 5px;
+    color: #1d3c6a;
+    font-size: 24px;
+    width: 480px;
+    padding: 40px 0;
+    margin: 0px -20px;
+    outline: none;
+    cursor: pointer;
+  }
+  
+  .supply {
+	background: #1d3c6a;
+  width: 440px;
+  margin: 0 auto 20px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 24px
+}
+.supply span {
+  color: #dae1e4;
+  display: block;
+  padding: 40px 20px;
+}
  /*=======================================
  Base Layout Styles
  =======================================*/
@@ -120,8 +146,7 @@ html {
  Media Queries
  =======================================*/
  
- @media only screen and (min-width: 769px),
-        only screen and (min-width: 700px) and (orientation: landscape) {
+ @media (min-width: 769px) {
  
      body{
          padding-top: 144px;
@@ -141,13 +166,6 @@ html {
      
      }
  }
-     /* --- Float clearfix ---*/
- 
-     .clearfix::after {
-         content: "";
-         display: table;
-         clear: both;
-     }
      
      .name, 
      .col {
@@ -182,14 +200,7 @@ html {
      .name {
          width: 240px;
      }
- 
-     .img-party {
-         width: 300px;
-         float: left;
-         margin-top: 5px;
-         margin-right: 25px;
-         margin-bottom: 25px
-     }
+
  
  
  @media (min-width: 1025px){
@@ -202,3 +213,32 @@ html {
  
  /* --- Columns ---*/
  
+
+/* --- Float clearfix ---*/
+ 
+    .clearfix::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+
+/*===========================
+Flexbox Layout
+===========================*/
+
+.main-header {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.main-header {
+    justify-content: space-between;
+}
+
+.main-nav, .main-header {
+    flex: 1;
+    justify-content: space-around;
+}
+
