@@ -2,24 +2,35 @@
     Base Element Styles
 =====================================*/
 
-* {
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
     box-sizing: border-box;
- }
- 
+  }
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
  body {
      font-family: Verdana, Geneva, Tahoma, sans-serif;
      line-height: 1.6;
      color: rgb(3, 2, 0);
+     background-image: url(Images/noise.jpg);
+     background-color: #cccccc;
+     background-size: cover;
  }
  
  p {
      font-size: .95em;
-     margin-bottom: 1.5em
+     margin-bottom: 1.5em;
+     color: white
  }
  
  h2,
  h3 {
-     color: black
+     color: white
  }
  
  a {
@@ -42,17 +53,18 @@
  /*----Layout Containers----*/
  
  .wrapper {
-     padding-left 1em;
-     padding-right 1em;
+     padding-left: 1em;
+     padding-right: 1em;
  }
- 
-     
- .main-header{
+
+ .main-header {
      text-align: center;
      padding-top: 1.5em;
      padding-bottom: 1.5em;
      background: purple;
-     margin-bottom: 6px;
+     margin-bottom: 10px;
+     border-bottom: 20px solid red;
+
  }
  
  .main-footer {
@@ -95,8 +107,9 @@
  .name a,
  .main-nav a {
      text-align: center;
-     padding: 10px 15px;
+     padding: 5px 2px;
      display: block;
+     font-size: 1em;
  }
  
  /* Attribute Selectors --------------*/
@@ -107,11 +120,12 @@
  Media Queries
  =======================================*/
  
- @media (min-width: 769px) {
+ @media only screen and (min-width: 769px),
+        only screen and (min-width: 700px) and (orientation: landscape) {
  
      body{
          padding-top: 144px;
-     }
+        }
  
      .wrapper{
          width: 80%;
@@ -141,8 +155,11 @@
      }
      
      .col {
-         padding-left: 1em;
+         display: inline-block;
+         margin-right: -4px;
+         vertical-align: top;
          padding-right: 1em;
+         padding-left: 1em;
      }
  
      .primary,
@@ -173,8 +190,6 @@
          margin-right: 25px;
          margin-bottom: 25px
      }
- 
- }
  
  
  @media (min-width: 1025px){
