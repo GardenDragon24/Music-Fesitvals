@@ -58,7 +58,7 @@ html {
     outline: none;
     cursor: pointer;
   }
-  
+
   .supply {
 	background: #1d3c6a;
   width: 440px;
@@ -172,12 +172,16 @@ html {
          float: left;
      }
      
-     .col {
-         display: inline-block;
-         margin-right: -4px;
-         vertical-align: top;
-         padding-right: 1em;
-         padding-left: 1em;
+     .column {
+        width: 440px;
+        background: lightgray;
+        margin: 0 auto 20px;
+        border-radius: 5px;
+        display: inline-block;
+        margin-right: -4px;
+        vertical-align: top;
+        padding-right: 1em;
+        padding-left: 1em;
      }
  
      .primary,
